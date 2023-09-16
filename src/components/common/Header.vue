@@ -1,12 +1,15 @@
 <template>
   <div class="header">
-    <div class="logo">
-      <img src="@/assets/svg/logo.svg" alt="logo">
+    <div class="logo" @click="$router.push('/')">
+      <img src="/svg/logo.svg">
       <span>Video-Library</span>
     </div>
     <div class="menu">
-      <el-menu :default-active="0" class="el-menu-demo" mode="horizontal" :ellipsis="false" @select="handleSelect">
-        <el-menu-item v-for="(menu, index) in menus" :key="index" :index="index"> {{ menu.title }} </el-menu-item>
+      <el-menu router default-active="/" class="el-menu-demo" mode="horizontal" :ellipsis="false" @select="handleSelect">
+        <el-menu-item v-for="(menu, index) in menus" :key="index" :index="menu.targetUrl">
+          <img :src='menu.icoPath'>
+          {{ menu.title }}
+        </el-menu-item>
       </el-menu>
     </div>
     <div class="search">
@@ -37,27 +40,33 @@ const handleSelect = (key, keyPath) => {
 const menus = ref([
   {
     title: '首页',
-    icoPath: '@/assets/svg/logo.svg'
+    icoPath: '/svg/home.svg',
+    targetUrl: '/'
   },
   {
     title: '电影',
-    icoPath: '@/assets/svg/logo.svg'
+    icoPath: '/svg/movie.svg',
+    targetUrl: '/movie'
   },
   {
     title: '电视剧',
-    icoPath: '@/assets/svg/logo.svg'
+    icoPath: '/svg/tv.svg',
+    targetUrl: '/tv'
   },
   {
     title: '动漫',
-    icoPath: '@/assets/svg/logo.svg'
+    icoPath: '/svg/animation.svg',
+    targetUrl: '/animation'
   },
   {
     title: '综艺',
-    icoPath: '@/assets/svg/logo.svg'
+    icoPath: '/svg/variety.svg',
+    targetUrl: '/variety'
   },
   {
     title: '纪录片',
-    icoPath: '@/assets/svg/logo.svg'
+    icoPath: '/svg/logo.svg',
+    targetUrl: '/jlp'
   }
 ])
 
@@ -74,7 +83,6 @@ const logoutHandle = () => {
   justify-content: space-between;
   align-items: center;
   height: 100px;
-  border-bottom: 1px solid #dbd1d1;
 
   .logo {
     margin-left: 20px;
@@ -92,6 +100,10 @@ const logoutHandle = () => {
 
   .menu {
     margin-left: 100px;
+
+    img {
+      height: 18px;
+    }
   }
 
   .search {
@@ -100,6 +112,7 @@ const logoutHandle = () => {
   }
 
   .userInfo {
+    margin-left: 20px;
     margin-right: 20px;
 
     img {
