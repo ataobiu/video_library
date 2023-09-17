@@ -1,3 +1,4 @@
+  <!-- 头部组件 -->
 <template>
   <div class="header">
     <div class="logo" @click="$router.push('/')">
@@ -83,6 +84,7 @@ const logoutHandle = () => {
   justify-content: space-between;
   align-items: center;
   height: 100px;
+  background-color: white;
 
   .logo {
     margin-left: 20px;

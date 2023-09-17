@@ -9,17 +9,27 @@ const routes = [
     children: [
       {
         path: '/movie',
-        name: 'about',
+        name: 'movie',
         component: () => import('../views/AboutView.vue')
       },
       {
         path: '/tv',
-        name: 'about',
+        name: 'tv',
         component: () => import('../views/AboutView.vue')
       },
       {
-        path: '/movie',
-        name: 'about',
+        path: '/animation',
+        name: 'animation',
+        component: () => import('../views/AboutView.vue')
+      },
+      {
+        path: '/variety',
+        name: 'variety',
+        component: () => import('../views/AboutView.vue')
+      },
+      {
+        path: '/jlp',
+        name: 'jlp',
         component: () => import('../views/AboutView.vue')
       },
     ]

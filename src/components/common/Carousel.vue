@@ -1,5 +1,6 @@
+  <!-- 首页轮播图组件 -->
 <template>
-    <el-carousel :interval="4000" type="card" height="200px">
+    <el-carousel :interval="4000" type="card" height="300px">
         <el-carousel-item v-for="item in carousels" :key="item" @click="gotoDetail(item.movie_url)">
             <el-image style="width: 100%; height: 100%" :src="item.movie_cover" fit="cover" />
             <h3 class="name">{{ item.movie_name }}</h3>

@@ -1,6 +1,8 @@
 <template>
-    <el-tabs type="border-card">
-        <el-tab-pane v-for="tab in tabs" :label="tab">{{ tab }}</el-tab-pane>
+    <el-tabs tab-position="right" type="border-card">
+        <a v-for="tab in tabs" :href="'#' + tab">
+            <el-tab-pane :label="tab">{{ tab }}</el-tab-pane>
+        </a>
     </el-tabs>
 </template>
 <script setup>
