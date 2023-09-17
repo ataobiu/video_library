@@ -32,6 +32,11 @@ const routes = [
         name: 'jlp',
         component: () => import('../views/AboutView.vue')
       },
+      {
+        path: '/',
+        name: 'hotpage',
+        component: () => import('../views/TabHotPage.vue')
+      },
     ]
   },
 

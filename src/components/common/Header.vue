@@ -17,16 +17,18 @@
       <el-input v-model="input1" class=" w-50 m-2" size="large" placeholder="搜索电影，剧集，动漫，演员" :prefix-icon="Search" />
     </div>
     <div class="userInfo">
-      <div class="flex flex-wrap items-center">
-        <el-dropdown>
-          <img :src="userInfo.pic" alt="用户头像">
-          <template #dropdown>
-            <el-dropdown-menu>
-              <el-dropdown-item @click="logoutHandle">注销</el-dropdown-item>
-            </el-dropdown-menu>
-          </template>
-        </el-dropdown>
-      </div>
+      <el-tooltip class="box-item" effect="light" :content="userInfo.name" placement="left">
+        <div class="flex flex-wrap items-center">
+          <el-dropdown>
+            <img :src="userInfo.pic" alt="用户头像">
+            <template #dropdown>
+              <el-dropdown-menu>
+                <el-dropdown-item @click="logoutHandle">注销</el-dropdown-item>
+              </el-dropdown-menu>
+            </template>
+          </el-dropdown>
+        </div>
+      </el-tooltip>
     </div>
   </div>
 </template>
