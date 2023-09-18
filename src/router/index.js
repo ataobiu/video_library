@@ -10,32 +10,32 @@ const routes = [
       {
         path: '/movie',
         name: 'movie',
-        component: () => import('../views/AboutView.vue')
+        component: () => import('../views/MorePage.vue')
       },
       {
         path: '/tv',
         name: 'tv',
-        component: () => import('../views/AboutView.vue')
+        component: () => import('../views/MorePage.vue')
       },
       {
         path: '/animation',
         name: 'animation',
-        component: () => import('../views/AboutView.vue')
+        component: () => import('../views/MorePage.vue')
       },
       {
         path: '/variety',
         name: 'variety',
-        component: () => import('../views/AboutView.vue')
+        component: () => import('../views/MorePage.vue')
       },
       {
         path: '/jlp',
         name: 'jlp',
-        component: () => import('../views/AboutView.vue')
+        component: () => import('../views/MorePage.vue')
       },
       {
         path: '/',
         name: 'hotpage',
-        component: () => import('../views/TabHotPage.vue')
+        component: () => import('../views/HotPage.vue')
       },
     ]
   },

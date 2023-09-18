@@ -4,7 +4,7 @@
             {{ tab.title }}:
         </h3>
         <div class="container">
-            <el-scrollbar always >
+            <el-scrollbar always>
                 <div class="scrollbar-flex-content">
                     <div class="item" v-for="item in movie_data" @click="targetUrl(item.hot_url)">
                         <img :src="item.hot_img_url">
@@ -58,7 +58,7 @@ const targetUrl = (data) => {
     }
 
     h3 {
-        margin-left: 50px;
+        padding-left: 50px;
         text-align: start;
         padding-top: 100px;
         margin-top: 0;
