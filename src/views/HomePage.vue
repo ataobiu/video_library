@@ -21,9 +21,7 @@
           <Recent></Recent>
         </div>
         <div v-if="$route.path === '/'">
-        </div>
-        <div>
-          <HotPage></HotPage>
+          <Hot></Hot>
         </div>
         <MorePage></MorePage>
         <!-- Backtop 回到顶部 -->

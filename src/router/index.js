@@ -7,34 +7,29 @@ const routes = [
     component: () => import('../views/HomePage.vue'),
     children: [
       {
-        path: '/movie',
+        path: 'movie',
         name: 'movie',
         component: () => import('../views/MorePage.vue')
       },
       {
-        path: '/tv',
+        path: 'tv',
         name: 'tv',
         component: () => import('../views/MorePage.vue')
       },
       {
-        path: '/animation',
+        path: 'animation',
         name: 'animation',
         component: () => import('../views/MorePage.vue')
       },
       {
-        path: '/variety',
+        path: 'variety',
         name: 'variety',
         component: () => import('../views/MorePage.vue')
       },
       {
-        path: '/jlp',
+        path: 'jlp',
         name: 'jlp',
         component: () => import('../views/MorePage.vue')
-      },
-      {
-        path: '/',
-        name: 'hotpage',
-        component: () => import('../views/HotPage.vue')
       },
     ]
   },
